@@ -1,0 +1,130 @@
+/* following used for using the border-box model for the website */
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    border-style: solid;
+    border-color: #4C566A;
+    border-width: 2px;
+    border-radius: 1px;
+    padding: 10px;
+    width: fit-content;
+    background-color: #4C566A;
+    color: #E5E9F0;
+}
+
+h1:hover ~ h2:hover + h3:hover, h4:hover, h5:hover, h6:hover {
+    background-color: #E5E9F0;
+    color: #4C566A;
+}
+
+html {
+    font-family: Helvetica, sans-serif;
+    color: #3B4252;
+    text-align: justify;
+}
+
+body {
+    /* Padding, Margin, and Border short forms */
+    /* One relative unit used here */
+    padding: 0ex;
+    /* Two absolute units used here */
+    margin: 0px;
+    border: 0cm;
+}
+
+.body {
+    display: block;
+    padding: 0 1rem;
+}
+
+.body.p {
+    display: inline;
+}
+
+.header {
+    border: none;
+    border-radius: 0px;
+}
+
+.header h1 {
+    width: 100%;
+    height: fit-content;
+    max-width: 100%;
+    max-height: auto;
+    position: fixed;
+    text-decoration: none;
+    background-color: #4C566A;
+    color: #E5E9F0;
+    /* One absolute unit used here */
+    /* Margin long format */
+    margin: 0in 0px 0cm 0mm;
+    /* Border long format */
+    border: 0in 0px 0cm 9mm;
+    /* Two relative units used here */
+    /* Padding Long form */
+    padding: 1rem 1em;
+    border-radius: 0px;
+    display: block;
+}
+
+.invisible-block {
+    display: none;
+    position: sticky;
+}
+
+.invisible-block > p {
+    color: black;
+}
+
+#header-spacer {
+    min-height: 80px;
+}
+
+a[href="https://linuxtorvalds.com/"] {
+    text-decoration: none;
+    color: #A3BE8C;
+}
+
+a[href="https://linuxtorvalds.com/"]:active {
+    color: #EBCB8B;
+}
+
+#guest-image-gallery-flex {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    flex-shrink: 1;
+    width: fit-content;
+    flex-flow: row;
+    align-items: center;
+}
+
+#guest-image-gallery-flex * {
+    max-width: 25%;
+    max-height: 150px;
+}
+
+#guest-image-gallery-grid {
+    display: grid;
+    grid-gap: 0px;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(4, 1fr);
+    width: fit-content;
+    align-items: center;
+}
+
+#guest-image-gallery-grid * {
+    max-width: 100%;
+    max-height: 150px;
+}
+
+@media screen and (max-width: 500px) {
+    html {
+        font-family: 'Open Sans', sans-serif;
+    }
+}
+
